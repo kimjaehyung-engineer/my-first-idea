@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap');
 
 :root {
-    --bg-color: #0f172a;
-    --accent-color: #38bdf8;
-    --text-color: #f8fafc;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --bg-color: #f8fafc;
+    --accent-color: #6366f1;
+    --text-color: #1e293b;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.5);
     --font-main: 'Outfit', sans-serif;
 }
 
@@ -18,8 +18,7 @@
 body {
     background-color: var(--bg-color);
     background-image: 
-        radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.05) 0%, transparent 30%);
+        linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     color: var(--text-color);
     font-family: var(--font-main);
     height: 100vh;
@@ -31,13 +30,16 @@ body {
 
 .container {
     text-align: center;
-    padding: 3rem 5rem;
+    padding: 4rem 6rem;
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border-radius: 32px;
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        inset 0 2px 4px 0 rgba(255, 255, 255, 0.3);
     animation: fadeInScale 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -45,25 +47,26 @@ h1 {
     font-size: 40px;
     font-weight: 600;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
 }
 
 .subtitle {
-    font-weight: 300;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     color: var(--accent-color);
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    opacity: 0.8;
+    letter-spacing: 0.3em;
+    margin-bottom: 1rem;
+    display: block;
 }
 
 @keyframes fadeInScale {
     0% {
         opacity: 0;
-        transform: scale(0.9) translateY(20px);
+        transform: scale(0.95) translateY(30px);
     }
     100% {
         opacity: 1;
@@ -71,7 +74,7 @@ h1 {
     }
 }
 
-/* Subtle background glow movement */
+/* Subtle background movement */
 body::after {
     content: '';
     position: absolute;
@@ -79,8 +82,8 @@ body::after {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.03) 0%, transparent 70%);
-    animation: rotateBg 20s linear infinite;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 60%);
+    animation: rotateBg 30s linear infinite;
     z-index: -1;
 }
 
