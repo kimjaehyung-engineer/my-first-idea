@@ -8,11 +8,46 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <main>
-        <div class="container" id="main-container">
-            <p class="subtitle">Cheer Up</p>
-            <h1>오늘도 힘내세여</h1>
+    <header class="header">
+        <div class="header-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="header-icon">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+            <h2>나의 첫 서비스</h2>
         </div>
+        <nav class="header-nav">
+            <a href="#">소개</a>
+            <a href="#">기능</a>
+            <a href="#">문의</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="container" id="main-container">
+                <p class="subtitle">Cheer Up</p>
+                <h1>오늘도 힘내세여</h1>
+                <button class="btn">함께하기</button>
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <h2>사용자 후기</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <img src="profile1.png" alt="사용자 1" class="review-img">
+                    <p class="review-text">"이 서비스 덕분에 오늘 하루도 힘차게 시작할 수 있었습니다! 심플하면서도 꼭 필요한 기능이에요."</p>
+                    <p class="review-author">- 김지훈</p>
+                </div>
+                <div class="review-card">
+                    <img src="profile2.png" alt="사용자 2" class="review-img">
+                    <p class="review-text">"디자인이 너무 예뻐서 매일 방문하고 싶어져요. 세련된 색감과 부드러운 애니메이션이 정말 마음에 듭니다."</p>
+                    <p class="review-author">- 이수아</p>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <p>&copy; 2025 My Service</p>
+    </footer>
 </body>
 </html>
